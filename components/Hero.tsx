@@ -106,7 +106,7 @@ export default function Hero() {
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl"
                 >
                 <Mail className="h-6 w-6" />
-                <span>Start Your Journey with Josh! </span>
+                <span>Start Your Journey with Joshua! </span>
                 </button>
             </motion.div>
 
