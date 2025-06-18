@@ -121,10 +121,10 @@ export default function Hero() {
                 <div className="text-4xl font-black text-green-600">30+</div>
                 <div className="text-sm text-gray-600 font-medium">Happy Students</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-black text-emerald-600">95%</div>
-                <div className="text-sm text-gray-600 font-medium">Grade Boost</div>
-              </div>
+              {/* <div className="text-center"> */}
+                {/* <div className="text-4xl font-black text-emerald-600">95%</div> */}
+                {/* <div className="text-sm text-gray-600 font-medium">Grade Boost</div>
+              </div> */}
               <div className="text-center">
                 <div className="text-4xl font-black text-green-700">6+</div>
                 <div className="text-sm text-gray-600 font-medium">Years Experience</div>

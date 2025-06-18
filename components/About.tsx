@@ -20,11 +20,11 @@ export default function About() {
       title: "30+ Students",
       description: "Successfully tutored over 30 Students from high school to college levels"
     },
-    {
-      icon: <Star className="h-8 w-8" />,
-      title: "Proven Results",
-      description: "95% of students show significant grade improvement within 6 months"
-    }
+    // {
+    //   icon: <Star className="h-8 w-8" />,
+    //   title: "Proven Results",
+    //   description: "95% of students show significant grade improvement within 6 months"
+    // }
   ];
 
   return (    <section id="about" className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-emerald-50 relative overflow-hidden">
