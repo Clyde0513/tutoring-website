@@ -27,7 +27,7 @@ export default function About() {
     }
   ];
 
-  return (    <section id="about" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50 relative overflow-hidden">
+  return (    <section id="about" className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-emerald-50 relative overflow-hidden">
       {/* Cute Dino Guide */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
@@ -54,9 +54,8 @@ export default function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-        >
-          <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-green-700 bg-clip-text mb-6">
-            MEET JOSH! 
+        >          <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-blue-500 via-emerald-500 to-green-700 bg-clip-text mb-6">
+            MEET JOSH! 🌟
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
             Your passionate STEM educator who makes complex concepts fun and accessible for every student! 

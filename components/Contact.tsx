@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MessageSquare, Send, MapPin, Clock } from 'lucide-react';
+import { Mail,  MessageSquare, Send, MapPin, Clock } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -69,13 +69,13 @@ export default function Contact() {
       action: "mailto:dinojosh2014@gmail.com",
       color: "text-green-600"
     },
-    {
-      icon: <Phone className="h-6 w-6" />,
-      title: "Phone",
-      value: "(818) 826-9912",
-      action: "tel:+18188269912",
-      color: "text-emerald-600"
-    },
+    // {
+    //   icon: <Phone className="h-6 w-6" />,
+    //   title: "Phone",
+    //   value: "(818) 826-9912",
+    //   action: "tel:+18188269912",
+    //   color: "text-emerald-600"
+    // },
     {
       icon: <MessageSquare className="h-6 w-6" />,
       title: "Text Message",

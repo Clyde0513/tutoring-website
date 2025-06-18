@@ -14,12 +14,12 @@ export default function Services() {  const subjects = [
       icon: <Atom className="h-12 w-12" />,
       title: "Physics",
       levels: ["Conceptual Physics", "AP Physics 1 & 2", "AP Physics C", "College Physics", "Advanced Mechanics"],
-      color: "from-emerald-500 to-emerald-600"
+      color: "from-blue-500 to-blue-600"
     },    {
       icon: <Beaker className="h-12 w-12" />,
       title: "Chemistry",
       levels: ["General Chemistry", "AP Chemistry", "Organic Chemistry", "Physical Chemistry", "Biochemistry"],
-      color: "from-green-600 to-green-700"
+      color: "from-green-600 to-emerald-600"
     }
   ];
 
@@ -50,7 +50,7 @@ export default function Services() {  const subjects = [
     "College and career readiness"
   ];
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-green-50 to-emerald-100 relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-emerald-100 relative overflow-hidden">
       {/* Cute Dino Guide */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -77,9 +77,8 @@ export default function Services() {  const subjects = [
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-        >
-          <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-green-700 bg-clip-text mb-6">
-            JOSH&apos;S SERVICES! 
+        >          <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-blue-500 via-emerald-500 to-green-700 bg-clip-text mb-6">
+            JOSH&apos;S SERVICES! 🎯
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
             Comprehensive STEM tutoring designed to build confidence, boost grades, and make learning absolutely awesome! 

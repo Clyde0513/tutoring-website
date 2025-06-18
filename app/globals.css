@@ -5,6 +5,7 @@
   --foreground: #171717;
   --josh-green: #16a34a;
   --josh-emerald: #059669;
+  --josh-blue: #2563eb;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,22 +26,22 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar - Josh Green themed */
+/* Custom scrollbar - Josh Green and Blue themed */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f9ff;
+  background: linear-gradient(to bottom, #f0f9ff, #f0fdf4);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--josh-green);
+  background: linear-gradient(to bottom, var(--josh-blue), var(--josh-green));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--josh-emerald);
+  background: linear-gradient(to bottom, var(--josh-green), var(--josh-blue));
 }
 
 /* Custom pulse animation for dinosaurs */
