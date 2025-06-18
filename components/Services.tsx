@@ -61,12 +61,12 @@ export default function Services() {  const subjects = [
       >
         <div className="relative">
           <div className="text-5xl"></div>
-          <div className="absolute -top-6 -right-8 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
-            <div className="text-sm font-medium text-gray-700">
-              Check out Josh&apos;s amazing tutoring services! So many options! 
-            </div>
-            <div className="absolute bottom-0 left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
-          </div>
+              <div className="absolute -top-6 -left-8 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
+                <div className="text-sm font-medium text-gray-700">
+                  Check out Josh&apos;s amazing tutoring services! So many options! 
+                </div>
+                <div className="absolute bottom-0 right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
+              </div>
         </div>
       </motion.div>
 

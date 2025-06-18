@@ -105,7 +105,7 @@ export default function Contact() {
       >
         <div className="relative">
           <div className="text-6xl">🦕</div>
-          <div className="absolute -top-10 -left-44 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
+          <div className="absolute -top-20 -left-44 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
             <div className="text-sm font-medium text-gray-700">
               Ready to start your STEM adventure with Josh? Let&apos;s go! 
             </div>

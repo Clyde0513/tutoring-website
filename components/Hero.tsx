@@ -28,17 +28,16 @@ export default function Hero() {
             <div className="absolute bottom-0 left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
           </div>
         </div>
-      </motion.div>
-
-      {/* Cute Dino Guide 2 */}
+      </motion.div>      {/* Cute Dino Guide 2 */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 2.5 }}
-        className="absolute bottom-32 right-8 z-10"
+        className="absolute bottom-40 right-12 z-10"
       >        <div className="relative">
           <div className="text-5xl transform -scale-x-100 dino-bounce">🦖</div>
-          <div className="absolute -top-6 -left-32 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">            <div className="text-sm font-medium text-gray-700">
+          <div className="absolute -top-20 -left-36 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">            
+            <div className="text-sm font-medium text-gray-700">
               Scroll down to see Josh&apos;s amazing services! 
             </div>
             <div className="absolute bottom-0 right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
@@ -187,7 +186,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.8 }}
-                className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg"
+                className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg z-20"
               >
                 That&apos;s Josh! 👨‍🏫
               </motion.div>
@@ -216,9 +215,9 @@ export default function Hero() {
             </motion.div>
             
             <motion.div
-              animate={{ y: [-5, 15, -5], rotate: [0, 3, 0] }}
+              animate={{ y: [-5, 15, -5], rotate: [10, 3, 0] }}
               transition={{ repeat: Infinity, duration: 5 }}
-              className="absolute -bottom-8 left-1/3 bg-white p-4 rounded-full shadow-lg border-2 border-green-300"
+              className="absolute -bottom-12 left-1/4 bg-white p-4 rounded-full shadow-lg border-2 border-green-300"
             >
               <BookOpen className="h-8 w-8 text-green-700" />
             </motion.div>
