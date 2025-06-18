@@ -149,7 +149,7 @@ export default function Hero() {
               transition={{ duration: 1, delay: 1.5 }}
               className="absolute -left-16 top-1/4 text-6xl text-green-500 z-10"
             >
-              ↪
+              
             </motion.div>
             
             {/* Curly Arrow pointing to Josh's face from right */}
@@ -159,7 +159,7 @@ export default function Hero() {
               transition={{ duration: 1, delay: 1.7 }}
               className="absolute -right-16 top-1/3 text-6xl text-green-500 z-10 transform scale-x-[-1]"
             >
-              ↪
+              
             </motion.div>
 
             {/* Circular Profile Picture Container */}
