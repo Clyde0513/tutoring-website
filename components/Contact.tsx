@@ -61,28 +61,27 @@ export default function Contact() {
   const handleQuickEmail = () => {
     window.location.href = 'mailto:dinojosh2014@gmail.com';
   };
-
   const contactMethods = [
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
       value: "dinojosh2014@gmail.com",
       action: "mailto:dinojosh2014@gmail.com",
-      color: "text-blue-600"
+      color: "text-green-600"
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
       value: "(818) 826-9912",
       action: "tel:+18188269912",
-      color: "text-green-600"
+      color: "text-emerald-600"
     },
     {
       icon: <MessageSquare className="h-6 w-6" />,
       title: "Text Message",
       value: "(818) 826-9912",
       action: "sms:+1(818) 826-9912",
-      color: "text-purple-600"
+      color: "text-green-700"
     }
   ];
 
@@ -94,9 +93,27 @@ export default function Contact() {
     "Test Preparation",
     "Schedule a Session"
   ];
-
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gradient-to-br from-green-50 to-emerald-100 relative overflow-hidden">
+      {/* Cute Dino Guide */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="absolute top-20 right-12 z-10"
+      >
+        <div className="relative">
+          <div className="text-6xl">🦕</div>
+          <div className="absolute -top-10 -left-44 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
+            <div className="text-sm font-medium text-gray-700">
+              Ready to start your STEM adventure with Josh? Let&apos;s go! 
+            </div>
+            <div className="absolute bottom-0 right-8 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
+          </div>
+        </div>
+      </motion.div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -105,14 +122,11 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Ready to{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Get Started?
-            </span>
+          <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-green-700 bg-clip-text mb-6">
+            CONTACT JOSH! 📞
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Take the first step towards academic success. Contact me today to schedule your personalized tutoring session.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
+            Ready to start your amazing STEM journey? Contact Josh today and let&apos;s make learning an adventure! 
           </p>
         </motion.div>
 
@@ -125,13 +139,12 @@ export default function Contact() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Let&apos;s Connect
+            <div>              <h3 className="text-2xl font-bold text-green-800 mb-6">
+                Let&apos;s Connect with Josh!   
               </h3>
               <p className="text-gray-600 mb-8">
-                I&apos;m here to help you achieve your academic goals. Reach out through any of the methods below, 
-                and I&apos;ll get back to you within 24 hours.
+                Josh is here to help you achieve your academic dreams! Reach out through any of the methods below, 
+                and he&apos;ll get back to you within 24 hours. Let&apos;s make STEM awesome together! 
               </p>
             </div>
 
@@ -326,12 +339,12 @@ export default function Contact() {
               >
                 Email Me Now
               </a>
-              <a
+              {/* <a
                 href="tel:+18188269912"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Call Today
-              </a>
+              </a> */}
             </div>
           </div>
         </motion.div>

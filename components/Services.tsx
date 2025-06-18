@@ -3,24 +3,23 @@
 import { motion } from 'framer-motion';
 import { Calculator, Atom, Beaker, Clock, Users, Target, CheckCircle } from 'lucide-react';
 
-export default function Services() {
-  const subjects = [
+export default function Services() {  const subjects = [
     {
       icon: <Calculator className="h-12 w-12" />,
       title: "Mathematics",
       levels: ["Algebra I & II", "Geometry", "Trigonometry", "Pre-Calculus", "Calculus", "Statistics"],
-      color: "from-blue-500 to-blue-600"
+      color: "from-green-500 to-green-600"
     },
     {
       icon: <Atom className="h-12 w-12" />,
       title: "Physics",
       levels: ["Conceptual Physics", "AP Physics 1 & 2", "AP Physics C", "College Physics", "Advanced Mechanics"],
-      color: "from-purple-500 to-purple-600"
+      color: "from-emerald-500 to-emerald-600"
     },    {
       icon: <Beaker className="h-12 w-12" />,
       title: "Chemistry",
       levels: ["General Chemistry", "AP Chemistry", "Organic Chemistry", "Physical Chemistry", "Biochemistry"],
-      color: "from-green-500 to-green-600"
+      color: "from-green-600 to-green-700"
     }
   ];
 
@@ -50,9 +49,27 @@ export default function Services() {
     "Preparation for standardized tests",
     "College and career readiness"
   ];
-
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section id="services" className="py-20 bg-gradient-to-br from-green-50 to-emerald-100 relative overflow-hidden">
+      {/* Cute Dino Guide */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="absolute top-16 left-8 z-10"
+      >
+        <div className="relative">
+          <div className="text-5xl"></div>
+          <div className="absolute -top-6 -right-8 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
+            <div className="text-sm font-medium text-gray-700">
+              Check out Josh&apos;s amazing tutoring services! So many options! 
+            </div>
+            <div className="absolute bottom-0 left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
+          </div>
+        </div>
+      </motion.div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,14 +78,11 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Expert Tutoring{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Services
-            </span>
+          <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-green-700 bg-clip-text mb-6">
+            JOSH&apos;S SERVICES! 
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive STEM tutoring designed to build confidence, improve grades, and foster a love for learning.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
+            Comprehensive STEM tutoring designed to build confidence, boost grades, and make learning absolutely awesome! 
           </p>
         </motion.div>
 
