@@ -23,7 +23,6 @@ A fun, modern, and Josh-themed tutoring website built with Next.js, TypeScript, 
 - **Custom Animations**: Glowing text effects and bouncing dinosaur animations
 
 ### Dinosaur Guides:
-- ** Dino Dan**: Welcomes visitors and introduces Josh in the hero section
 - ** T-Rex Guide**: Encourages scrolling and exploration
 - ** About Dino**: Explains Josh's amazing background and qualifications
 - ** Services Dino**: Highlights Josh's tutoring options
@@ -57,7 +56,7 @@ pnpm install
 
 3. Set up environment variables:
 
-Create a `.env.local` file in the root directory:
+Create a `.env` file in the root directory:
 
 ```bash
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
@@ -103,10 +102,6 @@ Current contact details (update in `components/Contact.tsx`):
 - **SMS**: (818) 826-9912
 - **Availability**: Everyday after 12 PM
 - **Location**: Online sessions worldwide
-
-### Professional Photo
-
-Replace the placeholder in `public/Josh_professional.JPG` with the actual professional photo.
 
 ### Services & Pricing
 
