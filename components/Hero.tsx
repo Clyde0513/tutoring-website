@@ -37,9 +37,9 @@ export default function Hero() {
       >        <div className="relative">
           <div className="text-5xl transform -scale-x-100 dino-bounce">🦖</div>
           <div className="absolute -top-20 -left-36 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">            
-            <div className="text-sm font-medium text-gray-700">
+            {/* <div className="text-sm font-medium text-gray-700">
               Scroll down to see Josh&apos;s amazing services! 
-            </div>
+            </div> */}
             <div className="absolute bottom-0 right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
           </div>
         </div>
