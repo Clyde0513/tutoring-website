@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, BookOpen, Calculator, Atom, Pi } from 'lucide-react';
+import { Mail, Calculator, Atom, Pi } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Hero() {
@@ -188,7 +188,7 @@ export default function Hero() {
               </motion.div> */}
             </div>
                 {/* Floating Elements - Green and Blue themed */}
-            <motion.div
+            {/* <motion.div
               animate={{ y: [-10, 10, -10], rotate: [0, 5, 0] }}
               transition={{ repeat: Infinity, duration: 3 }}
               className="absolute -top-8 left-8 bg-white p-4 rounded-full shadow-lg border-2 border-blue-300"
@@ -210,7 +210,7 @@ export default function Hero() {
               className="absolute -bottom-12 left-1/4 bg-white p-4 rounded-full shadow-lg border-2 border-green-300"
             >
               <BookOpen className="h-8 w-8 text-green-700" />
-            </motion.div>            
+            </motion.div>             */}
             {/* Large Arrow pointing to Josh's profile picture from top left */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
