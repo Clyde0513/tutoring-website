@@ -1,34 +1,50 @@
-# 🦕 JOSH'S TUTORING WEBSITE 
+# Joshua's STEM Tutoring Website
 
-A fun, modern, and Josh-themed tutoring website built with Next.js, TypeScript, and Tailwind CSS! Featuring cute dinosaur guides, green color scheme, and personalized STEM tutoring services that make learning an adventure! 
+A modern, professional tutoring website for Joshua Baer, built with Next.js, TypeScript, and Tailwind CSS. Features a clean green design theme and comprehensive STEM tutoring services with seamless contact integration.
 
 ## Features
 
-- ** Josh-Themed Design**: Beautiful green gradient color scheme with Josh's name prominently displayed
-- ** Cute Dinosaur Guides**: Adorable cartoon dinosaurs with speech bubbles guide users through the website
-- ** Circular Profile Picture**: Josh's professional photo in a circular frame with curly arrows pointing to his face
-- ** Responsive Layout**: Fully optimized for desktop, tablet, and mobile devices
-- ** Smooth Animations**: Interactive elements powered by Framer Motion with custom bouncing dinosaurs
-- ** EmailJS Integration**: Direct email sending through contact forms
-- ** Multiple Contact Methods**: Email, phone, SMS, and contact form options
-- ** Professional Presentation**: Dedicated space for Josh's introduction and credentials
-- ** Service Showcase**: Detailed tutoring services for Math, Physics, and Chemistry
+- **Modern Design**: Clean green gradient color scheme with professional styling
+- **Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Animations**: Interactive elements powered by Framer Motion
+- **EmailJS Integration**: Contact form with direct email sending capability
+- **Multiple Contact Options**: Email, SMS, phone, and contact form
+- **Service Showcase**: Detailed tutoring services for Chemistry, Physics, and Calculus
+- **Professional About Section**: Comprehensive introduction and credentials
+- **High Performance**: Built with Next.js 15 and modern React 19
 
-##  Design Features
+## Page Sections
 
-### Josh-Themed Elements:
-- **HUGE Josh Name**: Josh's name is displayed in massive, glowing green text as the centerpiece
-- **Green Color Palette**: Consistent green and emerald color scheme throughout
-- **Circular Profile**: Professional photo in a circular frame with decorative arrows
-- **Custom Animations**: Glowing text effects and bouncing dinosaur animations
+### Hero Section
 
-### Dinosaur Guides:
-- ** T-Rex Guide**: Encourages scrolling and exploration
-- ** About Dino**: Explains Josh's amazing background and qualifications
-- ** Services Dino**: Highlights Josh's tutoring options
-- ** Contact Dino**: Motivates visitors to start their STEM adventure
+- Large-scale "JOSHUA" title with gradient text effects
+- Professional circular profile photo
+- Call-to-action buttons for quick contact
+- Animated elements and smooth scrolling
 
-##  Getting Started
+### About Section
+
+- Comprehensive background and qualifications
+- Educational credentials and experience
+- Teaching philosophy and approach
+- Professional achievements
+
+### Services Section
+
+- **Chemistry**: High school/Honors, AP Chemistry, College General Chemistry
+- **Physics**: AP Physics C (Mechanics & E&M), College General Physics  
+- **Calculus**: AP Calculus AB, College Calculus 1
+- One-on-one personalized sessions
+- Flexible scheduling options
+
+### Contact Section
+
+- Interactive contact form with EmailJS integration
+- Multiple contact methods (email, SMS, phone)
+- Availability information and location details
+- Automatic fallback to mailto if EmailJS fails
+
+## Getting Started
 
 ### Prerequisites
 
@@ -58,7 +74,7 @@ pnpm install
 
 Create a `.env` file in the root directory:
 
-```bash
+```env
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_emailjs_service_id
 NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
@@ -76,7 +92,7 @@ pnpm dev
 bun dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser and enjoy Josh's amazing website! 🎉
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the website! 
 
 ## EmailJS Setup
 
@@ -85,10 +101,12 @@ This website uses EmailJS for contact form functionality:
 1. Create a free account at [emailjs.com](https://emailjs.com)
 2. Set up an email service (Gmail, Outlook, etc.)
 3. Create an email template with these variables:
+
    - `{{from_name}}` - User's name
    - `{{from_email}}` - User's email  
    - `{{subject}}` - Email subject
    - `{{message}}` - User's message
+
 4. Get your credentials and update the `.env.local` file
 
 ## Customization
@@ -97,7 +115,7 @@ This website uses EmailJS for contact form functionality:
 
 Current contact details (update in `components/Contact.tsx`):
 
-- **Email**: dinojosh2014@gmail.com
+- **Email**: <dinojosh2014@gmail.com>
 - **Phone**: (818) 826-9912
 - **SMS**: (818) 826-9912
 - **Availability**: Everyday after 12 PM
@@ -107,35 +125,44 @@ Current contact details (update in `components/Contact.tsx`):
 
 Update tutoring services and rates in `components/Services.tsx`.
 
-## Project Structure
+## 📁 Project Structure
 
-```
+```text
 tutoring-website/
 ├── app/                    # Next.js App Router
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx          # Home page
+│   ├── globals.css        # Global styles & Tailwind imports
+│   ├── layout.tsx         # Root layout with metadata
+│   ├── page.tsx          # Main landing page
+│   └── favicon.ico       # Site favicon
 ├── components/            # React components
-│   ├── About.tsx         # About section
-│   ├── Contact.tsx       # Contact form & info
-│   ├── Hero.tsx          # Hero section
-│   ├── Navigation.tsx    # Navigation bar
-│   └── Services.tsx      # Services section
+│   ├── About.tsx         # About Joshua section
+│   ├── Contact.tsx       # Contact form & information
+│   ├── Hero.tsx          # Hero section with main CTA
+│   ├── Navigation.tsx    # Top navigation bar
+│   └── Services.tsx      # Tutoring services showcase
 ├── public/               # Static assets
-└── .env.local           # Environment variables
+│   ├── Josh_professional.JPG    # Profile photo
+│   ├── Tutoring_Logo_JB.png    # Site logo
+│   └── *.svg            # Various icons
+├── .env                 # Environment variables (not tracked)
+├── package.json         # Dependencies and scripts
+├── next.config.ts       # Next.js configuration
+├── tailwind.config.ts   # Tailwind CSS configuration
+└── tsconfig.json        # TypeScript configuration
 ```
 
 ## Technologies Used
 
 - **Next.js 15.3.3**: React framework with App Router and Turbopack
-- **React 19**: Latest React with concurrent features
+- **React 19**: Latest React with concurrent features  
 - **TypeScript 5**: Type-safe development
 - **Tailwind CSS 4**: Utility-first CSS framework
-- **Framer Motion 12**: Animation and gesture library
-- **EmailJS**: Client-side email sending
-- **Lucide React**: Modern icon library
+- **Framer Motion 12.18.1**: Animation and gesture library
+- **EmailJS 4.4.1**: Client-side email sending
+- **Lucide React 0.516.0**: Modern icon library
+- **Heroicons 2.2.0**: Additional icon set
 
-##  Contact Features
+## Contact Features
 
 The website provides multiple communication channels:
 
@@ -148,19 +175,23 @@ The website provides multiple communication channels:
 ## Deployment
 
 ### Build for Production
+
 ```bash
 npm run build
 npm start
 ```
 
 ### Deploy to Vercel (Recommended)
+
 1. Push your code to GitHub
 2. Connect your repository to [Vercel](https://vercel.com)
 3. Add environment variables in Vercel dashboard
 4. Deploy automatically on every push
 
 ### Environment Variables for Production
+
 Make sure to set these in your deployment platform:
+
 - `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
 - `NEXT_PUBLIC_EMAILJS_SERVICE_ID`  
 - `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
@@ -175,4 +206,4 @@ Dedicated tutor specializing in STEM subjects with a focus on personalized learn
 
 ---
 
-For questions or support, contact: dinojosh2014@gmail.com or clyde0513@g.ucla.edu or iclyde.villacrusis@gmail.com
+For questions or support, contact: <dinojosh2014@gmail.com> or <clyde0513@g.ucla.edu> or <iclyde.villacrusis@gmail.com>

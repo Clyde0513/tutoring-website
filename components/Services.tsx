@@ -1,25 +1,26 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calculator, Atom, Beaker, Clock, Users, Target, CheckCircle } from 'lucide-react';
+import { Calculator, Atom, Pi, Clock, Users, CheckCircle } from 'lucide-react';
 
 export default function Services() {  const subjects = [
     {
-      icon: <Calculator className="h-12 w-12" />,
-      title: "Mathematics",
-      levels: ["Algebra I & II", "Geometry", "Trigonometry", "Pre-Calculus", "Calculus", "Statistics"],
-      color: "from-green-500 to-green-600"
+      icon: <Atom className="h-12 w-12" />,
+      title: "Chemistry",
+      levels: ["High school / Honors Chemistry", "AP Chemistry", "College General Chemistry"],
+      color: "from-green-600 to-emerald-600"
     },
     {
-      icon: <Atom className="h-12 w-12" />,
+      icon: <Calculator className="h-12 w-12" />,
       title: "Physics",
-      levels: ["Conceptual Physics", "AP Physics 1 & 2", "AP Physics C", "College Physics", "Advanced Mechanics"],
+      levels: ["AP Physics C: Mechanics", "AP Physics C: Electricity & Magnetism", "College General Physics"],
       color: "from-blue-500 to-blue-600"
-    },    {
-      icon: <Beaker className="h-12 w-12" />,
-      title: "Chemistry",
-      levels: ["General Chemistry", "AP Chemistry", "Organic Chemistry", "Physical Chemistry", "Biochemistry"],
-      color: "from-green-600 to-emerald-600"
+    },
+    {
+      icon: <Pi className="h-12 w-12" />,
+      title: "Calculus",
+      levels: ["AP Calculus AB", "College Calculus 1"],
+      color: "from-green-600 to-green-700"
     }
   ];
 
@@ -33,11 +34,6 @@ export default function Services() {  const subjects = [
       icon: <Clock className="h-6 w-6" />,
       title: "Flexible Scheduling",
       description: "Available evenings and weekends to fit your busy schedule"
-    },
-    {
-      icon: <Target className="h-6 w-6" />,
-      title: "Goal-Oriented",
-      description: "Focused approach to help you achieve specific academic objectives"
     }
   ];
 
@@ -61,12 +57,12 @@ export default function Services() {  const subjects = [
       >
         <div className="relative">
           <div className="text-5xl"></div>
-              <div className="absolute -top-6 -left-8 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
+              {/* <div className="absolute -top-6 -left-8 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
                 <div className="text-sm font-medium text-gray-700">
                   Check out Josh&apos;s amazing tutoring services! So many options! 
                 </div>
                 <div className="absolute bottom-0 right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
-              </div>
+              </div> */}
         </div>
       </motion.div>
 
@@ -78,10 +74,13 @@ export default function Services() {  const subjects = [
           viewport={{ once: true }}
           className="text-center mb-16"
         >          <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-blue-500 via-emerald-500 to-green-700 bg-clip-text mb-6">
-            JOSH&apos;S SERVICES! 🎯
+            JOSHUA&apos;S SERVICES! 
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
-            Comprehensive STEM tutoring designed to build confidence, boost grades, and make learning absolutely awesome! 
+            Here are the physical science and math classes Joshua can assist you with!
+          </p>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto font-bold mt-4">
+            Please note that Joshua tutors exclusively ONLINE using the Zoom app.
           </p>
         </motion.div>
 
@@ -128,7 +127,7 @@ export default function Services() {  const subjects = [
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Why Choose My Tutoring Services?
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -168,7 +167,7 @@ export default function Services() {  const subjects = [
                 Transform Your Academic Journey
               </h3>
               <p className="text-gray-600 mb-6">
-                My proven tutoring approach has helped hundreds of students achieve their academic goals. 
+                My proven tutoring approach has helped 30+ students achieve their academic goals. 
                 Here&apos;s what you can expect when you work with me:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -188,12 +187,12 @@ export default function Services() {  const subjects = [
               </div>
             </div>
             
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
-                <h4 className="text-2xl font-bold text-gray-900 mb-4">Session Pricing</h4>
-                <div className="space-y-4">
+            <div className="text-center flex items-center h-full">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl w-full">
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">Session Pricing</h4>
+                <div className="space-y-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-blue-600">$40</div>
+                    <div className="text-4xl font-bold text-blue-600">$50</div>
                     <div className="text-gray-600">per hour</div>
                   </div>
                   <div className="text-sm text-gray-500">
@@ -201,19 +200,6 @@ export default function Services() {  const subjects = [
                     <p>• Customized lesson plans</p>
                     <p>• Progress tracking</p>
                     <p>• Homework support</p>
-                  </div>
-                  <div className="pt-4">
-                    <button 
-                      onClick={() => {
-                        const element = document.getElementById('contact');
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}
-                      className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                    >
-                      Book a Session
-                    </button>
                   </div>
                 </div>
               </div>

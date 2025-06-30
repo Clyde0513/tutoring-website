@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, BookOpen } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,12 +15,20 @@ export default function Navigation() {
     setIsOpen(false);
   };
 
-  return (    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b-2 border-green-200">
+  return (   
+     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b-2 border-green-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">          <div className="flex items-center space-x-3">
-            <div className="text-2xl">🦕</div>
-            <BookOpen className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-black bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">JOSH&apos;S TUTORING 📚</span>
+        <div className="flex justify-between items-center h-16">         
+           <div className="flex items-center space-x-3">
+            {/* <div className="text-2xl">🦕</div> */}
+            <Image 
+              src="/Tutoring_Logo_JB.png" 
+              alt="Joshua's Tutoring Logo" 
+              width={32} 
+              height={32} 
+              className="object-contain"
+            />
+            <span className="text-xl font-black bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">JOSHUA&apos;S TUTORING </span>
           </div>
           
           {/* Desktop Menu */}
@@ -46,7 +55,7 @@ export default function Navigation() {
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-full font-bold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Contact Josh! 
+              Contact Joshua! 
             </button>
           </div>
 

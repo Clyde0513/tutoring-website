@@ -58,9 +58,6 @@ export default function Contact() {
   };
 
   // Simple direct email function
-  const handleQuickEmail = () => {
-    window.location.href = 'mailto:dinojosh2014@gmail.com';
-  };
   const contactMethods = [
     {
       icon: <Mail className="h-6 w-6" />,
@@ -104,13 +101,13 @@ export default function Contact() {
         className="absolute top-20 right-12 z-10"
       >
         <div className="relative">
-          <div className="text-6xl">🦕</div>
-          <div className="absolute -top-20 -left-44 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
+          {/* <div className="text-6xl">🦕</div> */}
+          {/* <div className="absolute -top-20 -left-44 bg-white p-3 rounded-2xl shadow-lg border-2 border-green-300 max-w-xs">
             <div className="text-sm font-medium text-gray-700">
               Ready to start your STEM adventure with Josh? Let&apos;s go! 
             </div>
             <div className="absolute bottom-0 right-8 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white"></div>
-          </div>
+          </div> */}
         </div>
       </motion.div>
 
@@ -123,10 +120,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-green-700 bg-clip-text mb-6">
-            CONTACT JOSH! 📞
+            CONTACT ME!
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
-            Ready to start your amazing STEM journey? Contact Josh today and let&apos;s make learning an adventure! 
+            Josh is here to help you achieve your academic dreams! Reach out through any of the methods below, and he&apos;ll get back to you within 24 hours. Let&apos;s make STEM awesome together!
           </p>
         </motion.div>
 
@@ -139,12 +136,12 @@ export default function Contact() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div>              <h3 className="text-2xl font-bold text-green-800 mb-6">
-                Let&apos;s Connect with Josh!   
+            <div>              
+              <h3 className="text-2xl font-bold text-green-800 mb-6">
+                Get In Touch!   
               </h3>
               <p className="text-gray-600 mb-8">
-                Josh is here to help you achieve your academic dreams! Reach out through any of the methods below, 
-                and he&apos;ll get back to you within 24 hours. Let&apos;s make STEM awesome together! 
+                I&lsquo;m here to help! I hope you&apos;ll consider working with me. Please reach out using the methods below. Or, fill out my contact form on the right side of this page. Thanks!
               </p>
             </div>
 
@@ -191,7 +188,6 @@ export default function Contact() {
               </h4>
               <div className="text-gray-600">
                 <p>Online sessions available worldwide</p>
-                <p>There are no In-person sessions available yet</p>
               </div>
             </div>
           </motion.div>
@@ -299,17 +295,7 @@ export default function Contact() {
               )}
             </form>
 
-            {/* Quick Email Button */}
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600 mb-3">Or send a quick email directly:</p>
-              <button
-                onClick={handleQuickEmail}
-                className="bg-white border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center space-x-2 mx-auto"
-              >
-                <Mail className="h-5 w-5" />
-                <span>Quick Email</span>
-              </button>
-            </div>
+         
 
             <div className="mt-6 text-center text-sm text-gray-600">
               <p>I typically respond within 24 hours</p>
@@ -325,7 +311,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl">
+          {/* <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Excel in STEM?
             </h3>
@@ -339,14 +325,9 @@ export default function Contact() {
               >
                 Email Me Now
               </a>
-              {/* <a
-                href="tel:+18188269912"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Call Today
-              </a> */}
+           
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>
