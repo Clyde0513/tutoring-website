@@ -44,72 +44,10 @@ A modern, professional tutoring website for Joshua Baer, built with Next.js, Typ
 - Availability information and location details
 - Automatic fallback to mailto if EmailJS fails
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ installed
-- npm, yarn, pnpm, or bun package manager
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-cd tutoring-website
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-3. Set up environment variables:
-
-Create a `.env` file in the root directory:
-
-```env
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_emailjs_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
-```
-
-4. Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the website! 
 
 ## EmailJS Setup
 
-This website uses EmailJS for contact form functionality:
-
-1. Create a free account at [emailjs.com](https://emailjs.com)
-2. Set up an email service (Gmail, Outlook, etc.)
-3. Create an email template with these variables:
-
-   - `{{from_name}}` - User's name
-   - `{{from_email}}` - User's email  
-   - `{{subject}}` - Email subject
-   - `{{message}}` - User's message
-
-4. Get your credentials and update the `.env.local` file
-
-## Customization
+This website uses EmailJS for contact form functionality
 
 ### Contact Information
 
@@ -171,30 +109,6 @@ The website provides multiple communication channels:
 3. **Phone**: Click-to-call functionality for mobile users
 4. **SMS**: Direct text message links
 5. **Fallback**: Automatic mailto fallback if EmailJS fails
-
-## Deployment
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Add environment variables in Vercel dashboard
-4. Deploy automatically on every push
-
-### Environment Variables for Production
-
-Make sure to set these in your deployment platform:
-
-- `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
-- `NEXT_PUBLIC_EMAILJS_SERVICE_ID`  
-- `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
 
 ## License
 
