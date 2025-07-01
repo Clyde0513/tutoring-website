@@ -13,7 +13,7 @@ export default function Services() {  const subjects = [
     {
       icon: <Calculator className="h-12 w-12" />,
       title: "Physics",
-      levels: ["AP Physics C: Mechanics", "AP Physics C: Electricity & Magnetism", "College General Physics"],
+      levels: ["High school / Honors Physics", "AP Physics C: Mechanics", "AP Physics C: Electricity & Magnetism", "College General Physics"],
       color: "from-blue-500 to-blue-600"
     },
     {
@@ -33,7 +33,7 @@ export default function Services() {  const subjects = [
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Flexible Scheduling",
-      description: "Available evenings and weekends to fit your busy schedule"
+      description: "Available everyday after 12 PM (PST) to fit your busy schedule"
     }
   ];
 

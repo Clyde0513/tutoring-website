@@ -122,9 +122,7 @@ export default function Contact() {
           <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-green-700 bg-clip-text mb-6">
             CONTACT ME!
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
-            Josh is here to help you achieve your academic dreams! Reach out through any of the methods below, and he&apos;ll get back to you within 24 hours. Let&apos;s make STEM awesome together!
-          </p>
+         
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -175,9 +173,7 @@ export default function Contact() {
                 <span>Availability</span>
               </h4>
               <div className="space-y-2 text-gray-600">
-                <p>• Everyday: After 12 PM</p>
-                {/* <p>• Saturday: 9:00 AM - 6:00 PM</p>
-                <p>• Sunday: 12:00 PM - 6:00 PM</p> */}
+                <p>• Everyday: After 12 PM PST (California time)</p>
               </div>
             </div>
 
