@@ -10,7 +10,8 @@ export default function Contact() {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    referral: ''
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -34,6 +35,7 @@ export default function Contact() {
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
+          referral: formData.referral,
           to_email: 'dinojosh2014@gmail.com'
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! 
@@ -41,7 +43,7 @@ export default function Contact() {
 
       if (result.status === 200) {
         setStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', subject: '', message: '', referral: '' });
       }
     } catch (error) {
       console.error('EmailJS failed:', error);
@@ -49,7 +51,7 @@ export default function Contact() {
       
       // Fallback to mailto if EmailJS fails
       const mailtoLink = `mailto:dinojosh2014@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        `Name: ${formData.name}\nEmail: ${formData.email}\nHow did you hear about me: ${formData.referral}\n\nMessage:\n${formData.message}`
       )}`;
       window.location.href = mailtoLink;
     } finally {
@@ -84,11 +86,9 @@ export default function Contact() {
 
   const subjects = [
     "General Inquiry",
-    "Math Tutoring",
-    "Physics Tutoring", 
     "Chemistry Tutoring",
-    "Test Preparation",
-    "Schedule a Session"
+    "Physics Tutoring", 
+    "Calculus Tutoring"
   ];
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-green-50 to-emerald-100 relative overflow-hidden">
@@ -274,7 +274,23 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Tell me about your goals, current challenges, or any questions you have..."
                 />
-              </div>              <button
+              </div>
+
+              <div>
+                <label htmlFor="referral" className="block text-sm font-medium text-gray-700 mb-2">
+                  How did you hear about me?
+                </label>
+                <input
+                  type="text"
+                  id="referral"
+                  name="referral"
+                  value={formData.referral}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  placeholder="e.g., Google, friend recommended you, social media..."
+                />
+              </div>             
+               <button
                 type="submit"
                 disabled={isLoading}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"

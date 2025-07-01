@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Joshua Baer Tutoring | Math, Physics & Chemistry Expert",
-  description: "Expert tutoring in Math, Physics, and Chemistry by Joshua Baer. Personalized learning approach to help students excel in STEM subjects.",
+  title: "Joshua Baer Tutoring | Physics, Chemistry & Calculus Expert",
+  description: "Expert tutoring in Physics, Chemistry, and Calculus by Joshua Baer. Personalized learning approach to help students excel in STEM subjects.",
 };
 
 export default function RootLayout({

@@ -1,19 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Calculator, Atom, Pi } from 'lucide-react';
+import { Calculator, Atom, Pi } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Hero() {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-green-50 to-emerald-100 relative overflow-hidden">
+    <section id="home" className="pt-20 pb-12 min-h-screen flex items-center bg-gradient-to-br from-green-50 to-emerald-100 relative overflow-hidden">
       {/* Cute Dino Guide 1 */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -41,8 +34,8 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,12 +49,12 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.3 }}
-                className="text-center lg:text-left -mt-8 lg:-mt-32"
+                className="text-center lg:text-left"
               >                
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-gradient-to-r from-green-600 via-blue-500 via-emerald-500 to-green-700 bg-clip-text leading-none mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-black text-transparent bg-gradient-to-r from-green-600 via-blue-500 via-emerald-500 to-green-700 bg-clip-text leading-tight mb-4">
                   JOSHUA BAER
                 </h1>
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent -mt-0 mb-8">
+                <div className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-6">
                   One-on-one tutoring that improves understanding and grades in STEM!
                 </div>
                 
@@ -72,7 +65,7 @@ export default function Hero() {
                   className="text-base sm:text-lg text-gray-600 leading-relaxed"
                 >
                   Transform your understanding of Chemistry, Physics, and Calculus with Joshua Baer&apos;s 
-                  personalized tutoring approach. From confusion to confidence, let&apos;s make learning an adventure! 
+                  personalized tutoring approach. From confusion to confidence, embark on your journey of learning today!
                 </motion.p>
               </motion.div>
             </div>            {/* Subject Icons - Green and Blue themed */}
@@ -96,22 +89,6 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* CTA Buttons - Green and Blue themed */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-                <button 
-                onClick={scrollToContact}
-                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 sm:space-x-3 shadow-lg hover:shadow-xl"
-                >
-                <Mail className="h-6 w-6" />
-                <span>Start Your Journey with Joshua! </span>
-                </button>
-            </motion.div>
-
             {/* Achievement Stats - Green themed */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -133,14 +110,14 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex justify-center items-center "
+            className="relative flex justify-center items-center"
           >
             {/* Curly Arrow pointing to Josh's face from left */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 1.5 }}
-              className="absolute -left-16 top-1/4 text-6xl text-green-500 z-10"
+              className="absolute -left-12 top-1/4 text-4xl text-green-500 z-10 hidden lg:block"
             >
               
             </motion.div>
@@ -150,7 +127,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 1.7 }}
-              className="absolute -right-16 top-1/3 text-6xl text-green-500 z-10 transform scale-x-[-1]"
+              className="absolute -right-12 top-1/3 text-4xl text-green-500 z-10 transform scale-x-[-1] hidden lg:block"
             >
               
             </motion.div>
@@ -162,7 +139,7 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
-                className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-100 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 sm:border-8 border-gradient-to-br from-green-400 to-emerald-600 bg-gradient-to-br from-green-400 to-emerald-600 p-1 sm:p-2 -ml-32"
+                className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 sm:border-8 border-gradient-to-br from-green-400 to-emerald-600 bg-gradient-to-br from-green-400 to-emerald-600 p-1 sm:p-2"
                 >
                 <div className="w-full h-full rounded-full overflow-hidden">
                   <Image 
@@ -182,14 +159,14 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 2.2 }}
-               className="absolute -top-12 sm:-top-16 lg:-top-28 -left-24 sm:-left-32 lg:-left-36 z-10"
+               className="absolute top-10 sm:top-8 lg:top-6 -left-18 sm:-left-24 lg:-left-28 z-10 hidden lg:block"
             >
               <Image 
                 src="/arrow-transparent.png" 
                 alt="Arrow pointing to Josh"
-                width={180}
-                height={110}
-                className="transform rotate-45 sm:w-[220px] sm:h-[130px] lg:w-[250px] lg:h-[200px]"
+                width={200}
+                height={120}
+                className="transform rotate-45 sm:w-[240px] sm:h-[145px] lg:w-[280px] lg:h-[170px]"
               />
             </motion.div>
 
