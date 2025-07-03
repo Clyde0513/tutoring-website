@@ -55,7 +55,7 @@ export default function Hero() {
                   JOSHUA BAER
                 </h1>
                 <div className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-6">
-                  One-on-one tutoring that improves understanding and grades in STEM!
+                  One-on-one online tutoring that improves understanding and grades in STEM!
                 </div>
                 
                 <motion.p 

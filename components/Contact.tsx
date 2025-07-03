@@ -36,7 +36,7 @@ export default function Contact() {
           subject: formData.subject,
           message: formData.message,
           referral: formData.referral,
-          to_email: 'dinojosh2014@gmail.com'
+          to_email: 'joshuabaer2021@gmail.com'
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! 
       );
@@ -50,7 +50,7 @@ export default function Contact() {
       setStatus('error');
       
       // Fallback to mailto if EmailJS fails
-      const mailtoLink = `mailto:dinojosh2014@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      const mailtoLink = `mailto:joshuabaer2021@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\nHow did you hear about me: ${formData.referral}\n\nMessage:\n${formData.message}`
       )}`;
       window.location.href = mailtoLink;
@@ -64,8 +64,8 @@ export default function Contact() {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      value: "dinojosh2014@gmail.com",
-      action: "mailto:dinojosh2014@gmail.com",
+      value: "joshuabaer2021@gmail.com",
+      action: "mailto:joshuabaer2021@gmail.com",
       color: "text-green-600"
     },
     // {
@@ -213,7 +213,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 placeholder-gray-500 bg-white"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -229,7 +229,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 placeholder-gray-500 bg-white"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -245,7 +245,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 bg-white"
                 >
                   <option value="">Select a subject</option>
                   {subjects.map((subject, index) => (
@@ -267,7 +267,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none text-gray-900 placeholder-gray-500 bg-white"
                   placeholder="Tell me about your goals, current challenges, or any questions you have..."
                 />
               </div>
@@ -282,7 +282,7 @@ export default function Contact() {
                   name="referral"
                   value={formData.referral}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-gray-900 placeholder-gray-500 bg-white"
                   placeholder="e.g., Google, friend recommended you, social media..."
                 />
               </div>             

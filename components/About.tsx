@@ -73,7 +73,7 @@ export default function About() {
             </h3> */}
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Hi! I&apos;m Joshua, a UCLA chemistry graduate with a focus in physics. I&apos;ve been tutoring for 6 years, helping students excel in AP Chemistry, AP Physics&nbsp;C, and AP Calculus AB. There&apos;s nothing more rewarding than seeing that &ldquo;Aha!&rdquo; moment when concepts finally click.
+                Hi! I&apos;m Joshua, a UCLA chemistry graduate with a focus in physics. I&apos;ve been tutoring for 6 years, helping students excel in chemistry, physics, and calculus. There&apos;s nothing more rewarding than seeing that &ldquo;Aha!&rdquo; moment when concepts finally click.
               </p>
               
               <p>
